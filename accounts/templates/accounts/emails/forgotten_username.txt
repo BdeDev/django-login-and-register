@@ -1,0 +1,9 @@
+/**
+*@copyright   : ToXSL Technologies Pvt. Ltd. < https://toxsl.com >  
+*@author      : Shiv Charan Panjeta < shiv@toxsl.com >  
+*/
+{% load i18n %}
+
+{% trans 'Your username is:' %}
+
+{{ username }}

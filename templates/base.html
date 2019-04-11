@@ -1,0 +1,57 @@
+<!--
+*@copyright   : ToXSL Technologies Pvt. Ltd. < https://toxsl.com >  
+*@author      : Shiv Charan Panjeta < shiv@toxsl.com >  
+-->
+
+{% load staticfiles %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Django Login and Registration</title>
+  
+   <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="{% static 'favicon.png' %}">
+
+    <title></title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+{% include 'includes/_header.html' %}
+
+
+<div id="main" class="container-fluid mt-3">
+
+    {% bootstrap_messages %}
+
+    {% block content %}
+    
+    
+    {% endblock %}
+    {% include 'includes/_footer.html' %}
+
+</div>
+
+<script src="{% static 'vendor/popper/popper.min.js' %}"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+<script src="{% static 'js/custom_js.js' %}"></script>
+
+</body>
+</html>

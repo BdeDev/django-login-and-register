@@ -1,0 +1,52 @@
+<!--
+*@copyright   : ToXSL Technologies Pvt. Ltd. < https://toxsl.com >  
+*@author      : Shiv Charan Panjeta < shiv@toxsl.com >  
+-->
+{% load i18n %}
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="{% url 'core:index' %}">Toxsl</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'core:index' %}#about">ABOUT</a></li>
+        <li><a href="{% url 'core:index' %}#services">SERVICES</a></li>
+        <li><a href="{% url 'core:index' %}#portfolio">PORTFOLIO</a></li>
+        <li><a href="{% url 'core:index' %}#contact">CONTACT</a></li>
+        {% if request.user.is_authenticated %}
+        
+         <div class="dropdown pull-right">
+			  <button class="dropbtn"><i class="glyphicon glyphicon-home"></i></button>
+			<div class="dropdown-content">
+			  <ul>
+			    <li class="nav-item">
+                    <a class="nav-link" href="{% url 'accounts:change_password' %}">{% trans 'Change password' %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'accounts:change_profile' %}">{% trans 'Change profile' %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'accounts:change_email' %}">{% trans 'Change email' %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'accounts:log_out' %}">{% trans 'Log out' %}</a>
+                </li>
+		       </ul>
+		   </div>
+		</div>
+        {% else %}
+        <li>
+                    <a href="{% url 'accounts:log_in' %}">{% trans 'LOG IN' %}</a></li>
+        <li>
+                   <a href="{% url 'accounts:sign_up' %}">{% trans 'REGISTER' %}</a></li>
+                    {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>

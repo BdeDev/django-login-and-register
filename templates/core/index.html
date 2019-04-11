@@ -1,0 +1,174 @@
+<!--
+*@copyright   : ToXSL Technologies Pvt. Ltd. < https://toxsl.com >  
+*@author      : Shiv Charan Panjeta < shiv@toxsl.com >  
+-->
+
+{% extends 'base.html' %}
+
+{% load i18n static %}
+
+{% block content %}
+
+
+
+<div class="jumbotron text-center">
+  <h1>ToXSL Technologies</h1> 
+  <p>We kick off new projects all the time. &nbsp;Whether it's another component in a client's service oriented architecture, a project prototype, or an internal tool,
+	getting started quickly is a required skill to best serve our customers</p> 
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Subscribe</button>
+      </div>
+    </div>
+  </form>
+</div>
+ 
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About ToXSL</h2><br>
+      <h4>ToXSL Technologies - An ISO:9001:2015 certified global software services company focuses on Mobile and Web Application development. We are experts in Android, iOS and Web Framework Development. Our expertise and commitment to deliver complex strategic IT projects make us a trusted service provider to 1100+ customers across the globe. We have a team size of more than 120 employees. It is a matter of great pride to us that many of these relationships have continued with us since the beginning.
+
+</h4><br>
+      <p>At ToXSL, we work with high cooperative efforts, diligent work, and commitment by supporting each other that enables us to make new attempts resulting in significant outcomes. Each one of us together understands the prerequisites of business, clients and target audience by utilizing a considerable number of benefits accessible to fulfill the need for learning, background, and development of all. Our organization is not only about technology, but it is also about our people and their professional growth.</p>
+      <br><a href="https://toxsl.com/" class="btn btn-default btn-lg">Get in Touch</a>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo "></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Values</h2><br>
+      <h4><strong>MISSION:</strong> Our mission is to achieve our objective in an environment that fosters honesty, fairness, integrity and a single minded focus on the success of our customers and to bring about an entrepreneurial revolution in India.</h4><br>
+      <p><strong>VISION:</strong> To be the leading provider of high end, best of breed product engineering life cycle solutions to the global software development and IT industry. Creating business agility via technical excellence and innovative solutions.</p>
+    </div>
+  </div>
+</div>
+
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row ">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-modal-window logo-small"></span>
+      <h4>Web Development Frameworks</h4>
+      <p>Dealing with the web development frameworks efficiently</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-phone logo-small"></span>
+      <h4>Mobile App Development Services</h4>
+      <p>Unique mobile applications</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-scale logo-small"></span>
+      <h4>Software Testing</h4>
+      <p>Testing emphasis on the application security, proper functioning of the site</p>
+    </div>
+  </div>
+  
+</div>
+
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Portfolio</h2><br>
+  <h4>What we have created</h4>
+  <div class="row text-center ">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="{% static 'web-development.jpg' %}" alt="Web Development" width="400" height="300">
+        <p><strong>Web Development</strong></p>
+        <p>Best for web development.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="{% static 'mobile-development.png' %}" alt="Mobile app Development" width="400" height="300">
+        <p><strong>Mobile app Development</strong></p>
+        <p>Best for mobile app development.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="{% static 'software-testing.jpg' %}" alt="Software testing tools" width="400" height="300">
+        <p><strong>Software testing tools</strong></p>
+        <p>Best for Software testing development</p>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>What our customers say</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+      </div>
+      <div class="item">
+        <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+      </div>
+    </div>
+
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> C-127, 4th floor, Phase 8, Industrial Area, Sector 72, Mohali, Punjab</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +91 956 912 7788</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> info@toxsl.com</p>
+    </div>
+    <div class="col-sm-7 ">
+    <form method="post" action="{% url 'contact:contact' %}">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+
+
+
